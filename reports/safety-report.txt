@@ -14,7 +14,7 @@
 
 +==============================================================================+
 
- [1mREPORT[0m 
+ [1mREPORT[0m
 
   Safety [1mv2.3.5[0m is scanning for [1mVulnerabilities[0m[1m...[0m
 [1m  Scanning dependencies[0m in your [1menvironment:[0m
@@ -29,7 +29,7 @@
 [1m  0[0m[1m vulnerabilities ignored[0m
 
 +==============================================================================+
- [31m[1mVULNERABILITIES FOUND[0m 
+ [31m[1mVULNERABILITIES FOUND[0m
 +==============================================================================+
 
 [31m-> Vulnerability found in flask version 2.3.3
@@ -91,12 +91,12 @@
 [1m   For more information, please visit
    [0mhttps://getsafety.com/v/72236/f17[0m
 
- Scan was completed. 6 vulnerabilities were found. 
+ Scan was completed. 6 vulnerabilities were found.
 
 +==============================================================================+
 [32m[1m   REMEDIATIONS[0m
 
-  6 vulnerabilities were found in 4 packages. For detailed remediation & fix 
-  recommendations, upgrade to a commercial license. 
+  6 vulnerabilities were found in 4 packages. For detailed remediation & fix
+  recommendations, upgrade to a commercial license.
 
 +==============================================================================+[0m
