@@ -6,8 +6,7 @@ A deliberately vulnerable Flask application, secured layer by layer through
 an 8-stage automated security pipeline — pre-commit scanning, dependency
 auditing, CI/CD gating, container hardening, cloud infrastructure security,
 dynamic testing, network monitoring, and AI-assisted incident response.
-unning blog app homepage. This is the first thing a visitor sees.
--->
+
 <img width="900" height="432" alt="image" src="https://github.com/user-attachments/assets/123ae524-123b-4a62-9b0a-8a1a6756cdc0" />
 <img width="1835" height="1016" alt="image" src="https://github.com/user-attachments/assets/b3a8039d-f17f-4dc0-bedc-aec04706cdd0" />
 
