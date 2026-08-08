@@ -124,16 +124,12 @@ Full detail and reproduction steps: [`docs/MODULE-0-VULNERABLE-APP.md`](docs/MOD
 
 
 
-### 1. Pre-Commit Hooks Blocking a Vulnerable Commit
-*What to capture: your terminal after running `git commit`, showing
-Bandit/Semgrep/detect-secrets output and the commit being rejected.*
+### 1. Bandit Output
 <p align="center">
   <img width="1447" height="431" alt="image" src="https://github.com/user-attachments/assets/1646a05f-9692-4b6f-822b-0e91d454ba84" />
 </p>
 
 ### 2. Dependency Scan / SBOM Output
-*What to capture: terminal output of `bash scripts/run-level2-checks.sh`,
-or the generated `reports/sbom.cyclonedx.json` opened in your editor.*
 <p align="center">
   <img width="1420" height="588" alt="image" src="https://github.com/user-attachments/assets/768e837c-5b64-444f-8417-dfff9b559f59" />
 </p>
@@ -145,15 +141,11 @@ or the generated `reports/sbom.cyclonedx.json` opened in your editor.*
 </p>
 
 ### 4. Running Containers
-*What to capture: `docker compose ps` output, or Docker Desktop's
-Containers tab showing all 5 services healthy.*
 <p align="center">
   <img width="1201" height="307" alt="image" src="https://github.com/user-attachments/assets/a160b122-2936-4e88-abd8-cb8efec1d561" />
 </p>
 
 ### 5. Terraform Apply Output
-*What to capture: terminal output of `terraform apply`, or the AWS Console
-showing the created VPC/EC2/S3 resources.*
 <p align="center">
   <img width="1415" height="890" alt="image" src="https://github.com/user-attachments/assets/7cb63308-4f11-41ac-9789-e701ddfbb26a" />
 </p>
@@ -171,16 +163,11 @@ the risk-ranked alert list.*
 </p>
 
 ### 8. Grafana Dashboard
-*What to capture: http://localhost:3000 — the "SecureApp Pipeline"
-dashboard with live metrics (ideally after generating some login-failure
-traffic so the panels aren't empty).*
 <p align="center">
   <img width="1672" height="1011" alt="image" src="https://github.com/user-attachments/assets/7139e2c5-cba3-401a-be31-357e5e111d98" />
 </p>
 
 ### 9. AI-Generated Incident Report
-*What to capture: the JSON response from `POST /incident-report`
-(http://localhost:8000/docs is the easiest place to trigger and view it).*
 <p align="center">
   <img width="1688" height="892" alt="image" src="https://github.com/user-attachments/assets/a2bc7da6-a279-40f3-ab09-6549eded612e" />
 </p>
