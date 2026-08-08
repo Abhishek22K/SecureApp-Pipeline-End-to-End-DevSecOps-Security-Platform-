@@ -60,10 +60,8 @@ assuming it does.
 
 ## Architecture
 
-<img width="667" height="360" alt="image" src="https://github.com/user-attachments/assets/a57003aa-b35a-4442-8fb1-06370970868c" />
-
 <p align="center">
-  <img src="docs/screenshots/02-architecture.png" alt="8-layer architecture diagram" width="800">
+  <img width="667" height="360" alt="image" src="https://github.com/user-attachments/assets/a57003aa-b35a-4442-8fb1-06370970868c" />
 </p>
 
 ---
@@ -91,10 +89,8 @@ pipeline has something real to catch:
 
 Full detail and reproduction steps: [`docs/MODULE-0-VULNERABLE-APP.md`](docs/MODULE-0-VULNERABLE-APP.md)
 
-<img width="932" height="435" alt="image" src="https://github.com/user-attachments/assets/ba0347e9-0cf6-4186-881d-aa373cdbf1ba" />
-
 <p align="center">
-  <img src="docs/screenshots/03-app-running.png" alt="Vulnerable app running in browser" width="700">
+  <img width="932" height="435" alt="image" src="https://github.com/user-attachments/assets/ba0347e9-0cf6-4186-881d-aa373cdbf1ba" />
 </p>
 
 ---
@@ -151,8 +147,6 @@ Full detail and reproduction steps: [`docs/MODULE-0-VULNERABLE-APP.md`](docs/MOD
 </p>
 
 ### 6. OWASP ZAP DAST Report
-*What to capture: `reports/zap-report.html` opened in a browser, showing
-the risk-ranked alert list.*
 <p align="center">
   <img width="1680" height="1019" alt="image" src="https://github.com/user-attachments/assets/612d9ca2-0550-46fa-837d-2eb3ff76a62a" />
 </p>
