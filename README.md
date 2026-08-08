@@ -1,6 +1,6 @@
 # SecureApp Pipeline
 
-a **End-to-End DevSecOps Security Across Every Layer of the SDLC**
+**a End-to-End DevSecOps Security Across Every Layer of the SDLC**
 
 A deliberately vulnerable Flask application, secured layer by layer through
 an 8-stage automated security pipeline — pre-commit scanning, dependency
