@@ -1,0 +1,20 @@
+# .checkov.yaml
+# Level 5 - Checkov config.
+#
+# Run: checkov --config-file .checkov.yaml
+
+directory:
+  - terraform
+
+framework:
+  - terraform
+
+# We do not skip any checks by default — the whole point of this module is
+# proving the infrastructure passes real policy checks, not silencing them.
+skip-check: []
+
+download-external-modules: false
+compact: true
+quiet: false
+
+output: cli

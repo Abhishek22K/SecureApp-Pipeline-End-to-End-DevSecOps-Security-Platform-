@@ -1,0 +1,19 @@
+# requirements-dev.txt
+# Tooling used by scripts/*.sh — kept separate from src/requirements.txt so the
+# app's runtime dependency set stays minimal (smaller attack surface, smaller
+# Docker image in Level 4).
+#
+# Install with: pip install -r requirements-dev.txt
+
+pre-commit==3.8.0
+bandit[toml]==1.7.9
+semgrep==1.78.0
+detect-secrets==1.5.0
+pip-audit==2.7.3
+safety==3.2.7
+cyclonedx-bom==4.5.0
+black==24.8.0
+flake8==7.1.1
+pytest==8.3.2
+pytest-cov==5.0.0
+requests==2.32.3

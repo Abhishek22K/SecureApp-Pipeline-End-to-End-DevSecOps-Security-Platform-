@@ -1,0 +1,11 @@
+# .tfsec.yml
+# Level 5 - tfsec config.
+#
+# Run: tfsec terraform/ --config-file .tfsec.yml
+
+exclude: []
+  # No exclusions on purpose. If a specific rule needs an exception later
+  # (e.g. a documented, reviewed exception), add it here WITH a comment
+  # explaining why — never silently.
+
+minimum_severity: LOW

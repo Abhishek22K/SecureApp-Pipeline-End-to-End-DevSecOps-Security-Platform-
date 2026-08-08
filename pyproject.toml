@@ -1,0 +1,17 @@
+[tool.bandit]
+# Level 1 - Bandit config.
+# We deliberately do NOT add anything to `skips` for the vulnerable baseline,
+# so B105 (hardcoded password string), B106 (hardcoded password func arg),
+# B303/B324 (weak MD5 hash), B608 (SQL injection via string building), and
+# B201 (Flask debug=True) all surface. This gets tuned down only after the
+# app is hardened (see docs/MODULE-1-PRE-COMMIT.md).
+exclude_dirs = ["venv", ".venv", "__pycache__", "tests", "node_modules"]
+skips = []
+
+[tool.bandit.assert_used]
+skips = ["*/test_*.py"]
+
+[tool.black]
+line-length = 110
+target-version = ["py310"]
+include = '\.pyi?$'

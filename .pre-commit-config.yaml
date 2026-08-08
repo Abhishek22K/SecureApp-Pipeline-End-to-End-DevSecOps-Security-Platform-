@@ -1,0 +1,84 @@
+# .pre-commit-config.yaml
+# Level 1 - Pre-Commit Security
+#
+# Install once per clone:
+#   pip install pre-commit
+#   pre-commit install
+#   pre-commit install --hook-type commit-msg
+#
+# Run manually against the whole repo:
+#   pre-commit run --all-files
+#
+# This BLOCKS the commit if any hook fails (non-zero exit code).
+
+repos:
+  # ---- General hygiene ----
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-merge-conflict
+      - id: detect-private-key          # catches committed PEM/SSH private keys
+      - id: check-case-conflict
+      - id: mixed-line-ending
+
+  # ---- Secret scanning ----
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args:
+          - "--baseline"
+          - ".secrets.baseline"
+        exclude: package-lock.json|.*\.lock$
+
+  # ---- Static application security testing (SAST) ----
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.9
+    hooks:
+      - id: bandit
+        args:
+          - "-c"
+          - "pyproject.toml"
+          - "-r"
+        additional_dependencies: ["bandit[toml]"]
+        files: ^src/
+
+  - repo: https://github.com/returntocorp/semgrep
+    rev: v1.78.0
+    hooks:
+      - id: semgrep
+        args:
+          - "--config"
+          - "scripts/semgrep-rules.yml"
+          - "--config"
+          - "p/python"
+          - "--config"
+          - "p/flask"
+          - "--config"
+          - "p/secrets"
+          - "--error"          # non-zero exit (blocks commit) if any finding at or above severity
+          - "--severity=ERROR"
+        files: ^src/
+
+  # ---- Python code quality (keeps SAST signal clean of noise) ----
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+        files: ^src/
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        files: ^src/
+        args: ["--max-line-length=110"]
+
+default_language_version:
+  python: python3

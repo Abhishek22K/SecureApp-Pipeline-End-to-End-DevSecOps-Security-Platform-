@@ -1,0 +1,19 @@
+# .hadolint.yaml
+# Level 4 - Dockerfile linting rules.
+#
+# Run: hadolint docker/Dockerfile --config .hadolint.yaml
+
+failure-threshold: warning   # anything at 'warning' severity or above fails the lint
+
+ignored:
+  - DL3008
+  # DL3008 (pin apt package versions): `build-essential` is a meta-package
+  # whose transitive dependency versions vary by architecture and change
+  # frequently; pinning it exactly breaks multi-arch builds and buys little
+  # security benefit since it's removed entirely before the final stage
+  # (builder-only). All other rules stay enabled.
+
+
+trustedRegistries:
+  - docker.io
+  - python
