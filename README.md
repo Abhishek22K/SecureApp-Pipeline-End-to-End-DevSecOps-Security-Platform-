@@ -119,55 +119,55 @@ Full detail and reproduction steps: [`docs/MODULE-0-VULNERABLE-APP.md`](docs/MOD
 <img width="1835" height="1016" alt="image" src="https://github.com/user-attachments/assets/81339c43-438e-4105-9407-44a61d3d9eea" />
 <img width="667" height="360" alt="image" src="https://github.com/user-attachments/assets/beb0d1a1-178f-42ef-aad8-0fb235c8eee3" />
 <img width="932" height="435" alt="image" src="https://github.com/user-attachments/assets/6984f8b1-2656-4680-a537-ae52525f2bdf" />
+<img width="1688" height="892" alt="image" src="https://github.com/user-attachments/assets/4bd0fadb-7cc3-4d82-96e7-3d7c89f0a661" />
+<img width="1680" height="1019" alt="image" src="https://github.com/user-attachments/assets/efc93efe-3a1e-45ad-a2ad-de6ac24d49a3" />
+
 
 
 ### 1. Pre-Commit Hooks Blocking a Vulnerable Commit
 *What to capture: your terminal after running `git commit`, showing
 Bandit/Semgrep/detect-secrets output and the commit being rejected.*
 <p align="center">
-  <img src="docs/screenshots/04-precommit-blocked.png" alt="Pre-commit hooks blocking a commit" width="750">
+  <img width="1447" height="431" alt="image" src="https://github.com/user-attachments/assets/1646a05f-9692-4b6f-822b-0e91d454ba84" />
 </p>
 
 ### 2. Dependency Scan / SBOM Output
 *What to capture: terminal output of `bash scripts/run-level2-checks.sh`,
 or the generated `reports/sbom.cyclonedx.json` opened in your editor.*
 <p align="center">
-  <img src="docs/screenshots/05-dependency-scan.png" alt="pip-audit and SBOM generation output" width="750">
+  <img width="1420" height="588" alt="image" src="https://github.com/user-attachments/assets/768e837c-5b64-444f-8417-dfff9b559f59" />
 </p>
 
-### 3. GitHub Actions Pipeline Run
-*What to capture: the Actions tab on GitHub showing all 7 jobs
-(test → sast/secrets-scan/dependency-scan → build-image → dast → push-image → deploy).*
+### 3. Dependency CVEs — pip-audit
 <p align="center">
-  <img src="docs/screenshots/06-cicd-pipeline.png" alt="GitHub Actions pipeline run" width="750">
+  <img width="1412" height="936" alt="image" src="https://github.com/user-attachments/assets/728ae131-47d6-4b8a-b2b8-893bd1dacceb" />
+
 </p>
 
 ### 4. Running Containers
 *What to capture: `docker compose ps` output, or Docker Desktop's
 Containers tab showing all 5 services healthy.*
 <p align="center">
-  <img src="docs/screenshots/07-docker-containers.png" alt="Docker containers running" width="750">
+  <img width="1201" height="307" alt="image" src="https://github.com/user-attachments/assets/a160b122-2936-4e88-abd8-cb8efec1d561" />
 </p>
 
 ### 5. Terraform Apply Output
 *What to capture: terminal output of `terraform apply`, or the AWS Console
 showing the created VPC/EC2/S3 resources.*
 <p align="center">
-  <img src="docs/screenshots/08-terraform-apply.png" alt="Terraform apply output" width="750">
+  <img width="1415" height="890" alt="image" src="https://github.com/user-attachments/assets/7cb63308-4f11-41ac-9789-e701ddfbb26a" />
 </p>
 
 ### 6. OWASP ZAP DAST Report
 *What to capture: `reports/zap-report.html` opened in a browser, showing
 the risk-ranked alert list.*
 <p align="center">
-  <img src="docs/screenshots/09-zap-report.png" alt="OWASP ZAP DAST report" width="750">
+  <img width="1680" height="1019" alt="image" src="https://github.com/user-attachments/assets/612d9ca2-0550-46fa-837d-2eb3ff76a62a" />
 </p>
 
-### 7. Nmap / Network Scan Results
-*What to capture: terminal output of `bash scripts/run-level7-checks.sh`
-showing the open-port table.*
+### 7. Software Bill of Materials 
 <p align="center">
-  <img src="docs/screenshots/10-nmap-scan.png" alt="Nmap network scan results" width="750">
+  <img width="1415" height="379" alt="image" src="https://github.com/user-attachments/assets/cea1c761-d697-4cf5-a996-e0b9e04a7f92" />
 </p>
 
 ### 8. Grafana Dashboard
@@ -175,14 +175,14 @@ showing the open-port table.*
 dashboard with live metrics (ideally after generating some login-failure
 traffic so the panels aren't empty).*
 <p align="center">
-  <img src="docs/screenshots/11-grafana-dashboard.png" alt="Grafana monitoring dashboard" width="750">
+  <img width="1672" height="1011" alt="image" src="https://github.com/user-attachments/assets/7139e2c5-cba3-401a-be31-357e5e111d98" />
 </p>
 
 ### 9. AI-Generated Incident Report
 *What to capture: the JSON response from `POST /incident-report`
 (http://localhost:8000/docs is the easiest place to trigger and view it).*
 <p align="center">
-  <img src="docs/screenshots/12-ai-incident-report.png" alt="AI-generated incident report" width="750">
+  <img width="1688" height="892" alt="image" src="https://github.com/user-attachments/assets/a2bc7da6-a279-40f3-ab09-6549eded612e" />
 </p>
 
 ---
